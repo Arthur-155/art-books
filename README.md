@@ -1,0 +1,40 @@
+# art-books
+
+Go service bootstrapped by `gofi init`.
+
+## Layout
+
+```
+.
+├── go.work
+├── src/
+│   ├── go.mod
+│   ├── .migrations/
+│   ├── domain/
+│   └── art-books/
+│       └── main.go
+└── .claude/                 # gofi agents config
+```
+
+## Build & run
+
+```sh
+go -C src run ./art-books
+```
+
+## Tests
+
+```sh
+gofi test
+```
+
+## Next steps
+
+Use the agents to design and implement your first context:
+
+```
+/gofi-pd     # discovery (optional)
+/gofi-spec   # generate the SDD spec
+/gofi-eng    # implement from spec
+/gofi-qa     # audit
+```

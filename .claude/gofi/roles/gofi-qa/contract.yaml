@@ -1,0 +1,35 @@
+# The role's contract, read by gofi only — the host never loads this file.
+#   tier       capability the role needs: light (reads and answers), standard
+#              (writes with a clear scope, or reviews), deep (decides and
+#              designs). gofi turns it into the host's model; ai.tiers overrides.
+#   produces   the artifact the role delivers; the intake plans a request that
+#              aims at it through this role.
+#   requires   what must exist first; the role that produces a missing one runs
+#              before. only_on limits a requirement to some intents; revise_on
+#              runs the producer again for those intents even when it exists.
+#   then       roles that always follow this one.
+#   intents    verbs that point at this role.
+#   needs      data the role cannot start without (context, change).
+#   visibility user (a slash command, the default) or internal (run by the
+#              flow alone, installed under .claude/gofi/roles/ — 0002, D19).
+#   stage      where in the loop the role works; a flow node of that stage
+#              dispatches it when one of its triggers holds (0002, D18).
+#   triggers   all/any lists of facts gofi computes, never a model:
+#              change.surface(backend|web|mobile|infra), sensor.green,
+#              sensor.failed(<stage>), verdict(<clean|caveats|rejected>),
+#              owner(<eng|spec|pd>), stuck, layer(<layer>), plan.none,
+#              tests.due, run.reworked, diff.touches(<layer>) — the list is
+#              cli/internal/role/dispatch.go's.
+#   tools      what the role may use in its turn (0002, D15): read, edit, write,
+#              search, gofi (the index), verify (the loop's sensors), verdict,
+#              memory, shell. Exactly these are granted; no role gets a shell.
+tier: standard
+produces: audit
+intents: [audite, auditar, revise, revisar, valide, validar, auditoria]
+needs: [context]
+reads_only: true
+visibility: internal
+stage: audit
+triggers:
+  - all: [sensor.green]
+tools: [read, search, gofi, verify, verdict, memory]

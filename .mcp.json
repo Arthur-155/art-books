@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gofi": {
+      "args": [
+        "mcp"
+      ],
+      "command": "gofi",
+      "type": "stdio"
+    }
+  }
+}

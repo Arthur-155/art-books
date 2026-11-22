@@ -1,0 +1,6 @@
+go 1.26.6
+
+use ./backend
+
+// Uncomment if you keep a local checkout of the gofi SDK alongside this project:
+// replace github.com/joaoprofile/gofi => ../gofi

@@ -1,0 +1,62 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "gofi hook guard",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "Grep|Glob|Read|Bash|mcp__gofi__.*"
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "gofi hook guard",
+            "timeout": 10,
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "mcp__gofi__find",
+      "mcp__gofi__show",
+      "mcp__gofi__path",
+      "mcp__gofi__index_status",
+      "mcp__gofi__intake",
+      "Bash(gofi find *)",
+      "Bash(gofi show *)",
+      "Bash(gofi path *)",
+      "Bash(gofi index status)",
+      "Bash(gofi index status *)",
+      "Bash(gofi intake *)",
+      "Bash(gofi spec check)",
+      "Bash(gofi spec check *)",
+      "Bash(gofi prd check)",
+      "Bash(gofi prd check *)",
+      "Bash(gofi spec order)",
+      "Bash(gofi spec order *)",
+      "Bash(gofi change list)",
+      "Bash(gofi change list *)",
+      "Bash(gofi flow check)",
+      "Bash(gofi flow check *)",
+      "Bash(gofi ps)",
+      "Bash(gofi logs *)",
+      "mcp__gofi__impact",
+      "Bash(gofi impact *)",
+      "Bash(gofi status)",
+      "Bash(gofi status *)",
+      "Bash(gofi scan)",
+      "Bash(gofi scan *)",
+      "Bash(gofi memory write *)",
+      "Bash(gofi verdict write *)"
+    ]
+  }
+}

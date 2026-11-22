@@ -1,0 +1,11 @@
+/bin/
+/dist/
+*.test
+*.out
+coverage.html
+.env
+.env.local
+.gofi/*
+!.gofi/index/
+.gofi/index/docs/
+.gofi/index/manifest.json

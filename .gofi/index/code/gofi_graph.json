@@ -1,0 +1,91 @@
+{
+ "schema": "gofi-graph/v1",
+ "tool": "gofi-graph",
+ "language": "go",
+ "module": "https://github.com/Arthur-155/art-books.git",
+ "mode": "fast",
+ "stats": {
+  "packages": 1,
+  "types": 0,
+  "funcs": 1,
+  "methods": 0,
+  "files": 1,
+  "loc": 8,
+  "nodes": 3,
+  "edges": 2,
+  "call_edges": 0,
+  "unresolved_calls": 0,
+  "ambiguous_calls": 0,
+  "communities": 0
+ },
+ "files": {
+  "art-books/main.go": {
+   "path": "art-books/main.go",
+   "hash": "811fccbf7a0b49c350b1c34fcde32c4d",
+   "unit": "https://github.com/Arthur-155/art-books.git/art-books",
+   "lines": 8
+  }
+ },
+ "communities": null,
+ "cycles": null,
+ "surprises": null,
+ "nodes": [
+  {
+   "id": "func:https://github.com/Arthur-155/art-books.git/art-books.main",
+   "kind": "func",
+   "name": "main",
+   "unit": "https://github.com/Arthur-155/art-books.git/art-books",
+   "file": "art-books/main.go",
+   "line": 5,
+   "lines": 3,
+   "vis": "private",
+   "sig": "func()",
+   "community": 0,
+   "in_deg": 0,
+   "out_deg": 0,
+   "score": 0
+  },
+  {
+   "id": "pkg:fmt",
+   "kind": "package",
+   "name": "fmt",
+   "unit": "fmt",
+   "vis": "public",
+   "external": true,
+   "community": 0,
+   "in_deg": 1,
+   "out_deg": 0,
+   "score": 2
+  },
+  {
+   "id": "pkg:https://github.com/Arthur-155/art-books.git/art-books",
+   "kind": "package",
+   "name": "main",
+   "unit": "https://github.com/Arthur-155/art-books.git/art-books",
+   "lines": 8,
+   "vis": "public",
+   "community": 0,
+   "in_deg": 0,
+   "out_deg": 1,
+   "score": 1
+  }
+ ],
+ "edges": [
+  {
+   "from": "pkg:https://github.com/Arthur-155/art-books.git/art-books",
+   "to": "func:https://github.com/Arthur-155/art-books.git/art-books.main",
+   "rel": "contains",
+   "file": "art-books/main.go",
+   "line": 5,
+   "conf": 1
+  },
+  {
+   "from": "pkg:https://github.com/Arthur-155/art-books.git/art-books",
+   "to": "pkg:fmt",
+   "rel": "imports",
+   "file": "art-books/main.go",
+   "line": 3,
+   "conf": 1
+  }
+ ]
+}

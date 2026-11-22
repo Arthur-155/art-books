@@ -1,0 +1,17 @@
+{
+ "schema": "gofi-graph/v1",
+ "tool": "gofi-graph",
+ "language": "go",
+ "scopes": [
+  {
+   "name": "project",
+   "dir": ".",
+   "root": "backend",
+   "language": "go",
+   "mode": "fast",
+   "nodes": 3,
+   "edges": 2,
+   "files": 1
+  }
+ ]
+}

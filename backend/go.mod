@@ -1,0 +1,8 @@
+module https://github.com/Arthur-155/art-books.git
+
+go 1.26.6
+
+// Uncomment when you start using the gofi SDK:
+// require github.com/joaoprofile/gofi v0.0.0
+//
+// replace github.com/joaoprofile/gofi => ../gofi

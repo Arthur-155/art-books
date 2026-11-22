@@ -1,0 +1,141 @@
+version: 2
+project:
+    name: art-books
+    root: /home/arthur/Documents/Projetos/projetos-go
+backend:
+    language: go
+    path: backend
+    module: https://github.com/Arthur-155/art-books.git
+frontend:
+    framework: react
+    path: frontend
+    brand: blue
+    styling: tailwind
+    state: tanstack-query
+    testing: vitest
+    ds: gofi-ui
+mobile:
+    framework: react-native
+    path: mobile
+    brand: blue
+    styling: stylesheet
+    state: tanstack-query
+    testing: jest
+    ds: gofi-ui-native
+ops:
+    cloud: oci # oci | aws | gcp | azure
+    iac: terraform # terraform | opentofu | pulumi
+    target: oke # k8s | oke | eks | gke | swarm | container-instances | paas
+    cicd: github-actions # github-actions | azure-devops | gitlab-ci | oci-devops
+    registry: ocir # ocir | ecr | gar | acr
+    path: ops
+ai:
+    host: claude-code
+    model: claude-sonnet-5-5
+    guard: enforce # warn | enforce | off — gofi guard <mode>
+    # Modelos exibidos pelo /model no gofi-ai. Descomente para adicionar ao picker.
+    models:
+        - claude-sonnet-5-5
+        # - claude-fable-5-1
+        # - claude-fable-5
+        # - claude-opus-5-5
+        # - claude-opus-5
+        # - claude-opus-4-8
+        # - claude-opus-4-7
+        # - claude-sonnet-5
+        # - claude-sonnet-4-6
+        # - claude-haiku-4-5
+sources:
+    agents: github.com/joaoprofile/gofi@v0.7.1
+    sdk:
+        go: github.com/joaoprofile/gofi-sdk-go@gofi/v0.2.18
+graph:
+    # false desliga o grafo e, com ele, os hooks que o mantêm em dia.
+    enabled: true
+    hooks: true
+    # fast (false) lê só a sintaxe: rápido, roda em código que não compila, e
+    # não inventa aresta quando a chamada é ambígua — ela é contada, não ligada.
+    # deep (true) resolve pelo type-checker: chamada exata e implementação de
+    # interface visíveis, ao custo de o projeto precisar compilar.
+    # Só em deep a ausência de aresta prova ausência de uso.
+    # Vale para `gofi update` e `gofi index code`. Os hooks de git reconstroem
+    # sempre em fast (--fast): o commit não espera o type-checker. Deep também
+    # só muda a varredura Go — superfície de UI é sintática de todo jeito.
+    # Com false, quem pede o deep é o agent, quando precisa provar ausência.
+    deep: false
+test:
+    default: unit
+    hooks:
+        pre: []
+        post: []
+    tasks:
+        cover:
+            desc: Coverage in text
+            run: go -C backend test -cover ./...
+        cover-html:
+            desc: Coverage as coverage.html
+            run: go -C backend test -coverprofile=coverage.out ./... && go -C backend tool cover -html=coverage.out -o coverage.html
+        sonar:
+            desc: SonarQube/SonarCloud analysis (requires SONAR_TOKEN, SONAR_HOST_URL)
+            run: gofi sonar start
+            needs:
+                - cover
+        unit:
+            desc: Unit tests
+            run: go -C backend test ./...
+hsec:
+    enabled: true
+    ignore_paths:
+        - '**/.env*'
+        - '**/.gofi/**'
+        - '**/.claude/**'
+        - '**/vendor/**'
+        - '**/node_modules/**'
+        - '**/dist/**'
+        - '**/build/**'
+        - '**/target/**'
+        - '**/.git/**'
+        - '**/*.min.js'
+        - '**/*_test.go'
+    severity_threshold: HIGH
+    return_error_on_finding: true
+    output_format: json
+    timeout_seconds: 600
+sonar:
+    enabled: true
+    project_key: art-books
+    project_name: art-books
+    sources:
+        - backend
+        - frontend
+        - mobile
+    exclusions:
+        - '**/*_test.go'
+        - '**/*.test.ts'
+        - '**/*.test.tsx'
+        - '**/*.test.js'
+        - '**/*.spec.ts'
+        - '**/*.spec.tsx'
+        - '**/*.spec.js'
+        - '**/testdata/**'
+        - '**/__tests__/**'
+        - '**/mocks/**'
+        - '**/mock_*.go'
+        - '**/*_mock.go'
+        - '**/*.mock.ts'
+        - '**/*.gen.go'
+        - '**/*.pb.go'
+        - '**/*_gen.go'
+        - '**/*.min.js'
+        - '**/.gofi/**'
+        - '**/.claude/**'
+        - '**/vendor/**'
+        - '**/node_modules/**'
+        - '**/dist/**'
+        - '**/build/**'
+        - '**/target/**'
+        - '**/coverage.out'
+        - '**/coverage.html'
+    coverage_report: coverage.out
+loop:
+    max_iterations: 3
