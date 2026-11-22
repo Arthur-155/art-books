@@ -1,0 +1,12 @@
+# specs/leitura-e-resumos — Specs (SDD)
+
+> **Nível 2 de 2.** Documentos desta pasta. Contexto: **leitura-e-resumos**.
+> **Entidades** são tabelas reais do schema — se procura quem define ou usa uma
+> tabela, é esta coluna. Escolhido o documento, leia o frontmatter e pule para a
+> §seção; nunca o arquivo inteiro.
+>
+> Derivado — não edite à mão. Regenere com `gofi index docs`.
+
+| Submódulo | Versão | Status | Entidades | Assunto | Arquivo |
+|---|---|---|---|---|---|
+| n/a | 1.0 | discovery | — | leitura, estante, quero ler, lendo, lido, capítulo, resumo de capítulo, resumo do livro, visibilidade, público, privado | `specs/leitura-e-resumos/insumos-delta-leitura-e-resumos.md` |
