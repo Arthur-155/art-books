@@ -9,9 +9,9 @@
    "root": "backend",
    "language": "go",
    "mode": "fast",
-   "nodes": 3,
-   "edges": 2,
-   "files": 1
+   "nodes": 224,
+   "edges": 597,
+   "files": 15
   },
   {
    "name": "sdk",
