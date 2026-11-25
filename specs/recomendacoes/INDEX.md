@@ -9,4 +9,6 @@
 
 | Submódulo | Versão | Status | Entidades | Assunto | Arquivo |
 |---|---|---|---|---|---|
+| n/a | 1.0 | aprovado | — | recomendação, worker, geração em segundo plano, anthropic, resumo breve, dispensa, limite diário, fuso horário, estante, catálogo, migration, postgresql | `specs/recomendacoes/design.md` |
 | n/a | 1.0 | discovery | — | recomendação, IA, gênero, autor, resumo breve, motivo, dispensar, quero ler, limite diário | `specs/recomendacoes/insumos-delta-recomendacoes.md` |
+| n/a | 1.0 | aprovado | — | recomendação, IA, gênero, autor, motivo, resumo breve, quero ler, dispensar, pedir outras, limite diário, livro confirmado, segundo plano | `specs/recomendacoes/proposal.md` |
