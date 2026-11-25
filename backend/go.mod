@@ -1,4 +1,4 @@
-module https://github.com/Arthur-155/art-books.git
+module github.com/Arthur-155/art-books
 
 go 1.26.6
 
