@@ -14,12 +14,12 @@
 | Contexto | Docs | Do que trata | Onde |
 |---|--:|---|---|
 | amizades | 1 | aceitar, amigos, amizade, cancelar pedido, desfazer amizade, pedido de amizade, recusar, username | `specs/amizades/INDEX.md` |
-| catalogo | 1 | catálogo, lista de gêneros, livro, livro não verificado, normalização, pesquisa em segundo plano, título, IA, autor, gênero | `specs/catalogo/INDEX.md` |
-| contas | 1 | administrador, cadastro, confirmação de e-mail, exclusão de conta, login, recuperação de senha, resend, senha, troca de e-mail | `specs/contas/INDEX.md` |
+| catalogo | 4 | livro, normalização, pesquisa em segundo plano, lista de gêneros, livro não verificado, título, catálogo, gênero, correção do gênero, administrador, autor, IA, nova tentativa, unique | `specs/catalogo/INDEX.md`<br>`specs/catalogo/deltas/INDEX.md` |
+| contas | 4 | cadastro, confirmação de e-mail, exclusão de conta, limite de tentativas, login, recuperação de senha, resend, troca de e-mail, administrador, argon2id, sessão, troca de senha, autenticação, contas | `specs/contas/INDEX.md`<br>`specs/contas/deltas/INDEX.md` |
 | feeds | 1 | feed, feed geral, feed vazio, filtro por gênero, resumo, ver mais, feed de amigos, republicação | `specs/feeds/INDEX.md` |
 | interacoes | 1 | comentar, comentário, curtida, curtir, interação, republicar, feed de amigos, republicação | `specs/interacoes/INDEX.md` |
-| leitura-e-resumos | 1 | capítulo, estante, leitura, lendo, lido, privado, público, resumo de capítulo, resumo do livro, quero ler, visibilidade | `specs/leitura-e-resumos/INDEX.md` |
+| leitura-e-resumos | 1 | capítulo, leitura, lendo, lido, privado, público, resumo de capítulo, resumo do livro, estante, quero ler, visibilidade | `specs/leitura-e-resumos/INDEX.md` |
 | perfil | 1 | lendo agora, livros lidos, perfil, perfil de amigo, recomendação escolhida, últimos livros lidos, visibilidade | `specs/perfil/INDEX.md` |
-| recomendacoes | 1 | dispensar, limite diário, motivo, recomendação, resumo breve, IA, autor, gênero, quero ler | `specs/recomendacoes/INDEX.md` |
+| recomendacoes | 4 | limite diário, recomendação, resumo breve, dispensar, motivo, livro confirmado, pedir outras, segundo plano, IA, autor, gênero, quero ler, dispensa, fuso horário | `specs/recomendacoes/INDEX.md`<br>`specs/recomendacoes/deltas/INDEX.md` |
 
-_8 documentos em 8 contextos, 8 pastas._
+_17 documentos em 8 contextos, 11 pastas._

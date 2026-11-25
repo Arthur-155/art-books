@@ -9,4 +9,6 @@
 
 | Submódulo | Versão | Status | Entidades | Assunto | Arquivo |
 |---|---|---|---|---|---|
+| n/a | 1.0 | proposto | — | catálogo, livro, gênero, normalização, unique, worker, pesquisa em segundo plano, anthropic, migration, administrador, postgresql | `specs/catalogo/design.md` |
 | n/a | 1.0 | discovery | — | catálogo, livro, título, autor, normalização, gênero, IA, pesquisa em segundo plano, lista de gêneros, livro não verificado | `specs/catalogo/insumos-delta-catalogo.md` |
+| n/a | 1.0 | proposto | — | catálogo, livro, título, autor, normalização, gênero, IA, pesquisa em segundo plano, lista de gêneros, livro não verificado, correção do gênero, administrador | `specs/catalogo/proposal.md` |
