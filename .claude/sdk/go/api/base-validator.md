@@ -1,0 +1,63 @@
+# base/validator
+
+`import "github.com/joaoprofile/gofi-sdk-go/base/validator"` · SDK gofi/v0.2.18 (c5413b9)
+
+> Gerado do código-fonte do SDK — não edite. Regenere com `gofi update sdk`.
+
+## Funções
+
+### validator.IsStruct
+
+```go
+func IsStruct(s any) error
+```
+
+### validator.IsStructP
+
+```go
+func IsStructP(s any) error
+```
+
+## validator.FieldError
+
+```go
+type FieldError struct {
+	Field   string `json:"field"`
+	Message string `json:"message"`
+}
+```
+
+## validator.ValidationError
+
+```go
+type ValidationError struct {
+	Errors []FieldError `json:"errors"`
+}
+```
+
+### ValidationError.Error
+
+```go
+func (v ValidationError) Error() string
+```
+
+## validator.Validator
+
+```go
+type Validator struct {
+	// contains filtered or unexported fields
+}
+```
+
+### validator.New
+
+```go
+func New() *Validator
+```
+
+### Validator.ValidateStruct
+
+```go
+func (v *Validator) ValidateStruct(s any) error
+```
+

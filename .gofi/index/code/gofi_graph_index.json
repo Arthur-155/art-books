@@ -12,6 +12,17 @@
    "nodes": 3,
    "edges": 2,
    "files": 1
+  },
+  {
+   "name": "sdk",
+   "dir": "sdk",
+   "root": ".gofi/gofi-sdk-go",
+   "language": "go",
+   "key": "c5413b90ea4a7ff396851f28fb9eed924fbcf3d9",
+   "mode": "fast",
+   "nodes": 3039,
+   "edges": 8846,
+   "files": 322
   }
  ]
 }

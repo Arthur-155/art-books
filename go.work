@@ -1,6 +1,43 @@
 go 1.26.6
 
-use ./backend
+use (
+	./backend
+	./.gofi/gofi-sdk-go/base
+	./.gofi/gofi-sdk-go/base/bucket/oci
+	./.gofi/gofi-sdk-go/base/bucket/s3
+	./.gofi/gofi-sdk-go/base/cloud/aws
+	./.gofi/gofi-sdk-go/base/cloud/oci
+	./.gofi/gofi-sdk-go/base/secrets/awssm
+	./.gofi/gofi-sdk-go/base/secrets/ocivault
+	./.gofi/gofi-sdk-go/examples/grpc
+	./.gofi/gofi-sdk-go/examples/iam/login
+	./.gofi/gofi-sdk-go/examples/msq/kafka/consumer
+	./.gofi/gofi-sdk-go/examples/msq/kafka/producer
+	./.gofi/gofi-sdk-go/examples/msq/rabbitmq/consumer
+	./.gofi/gofi-sdk-go/examples/msq/rabbitmq/producer
+	./.gofi/gofi-sdk-go/examples/msq/sqs/consumer
+	./.gofi/gofi-sdk-go/examples/msq/sqs/producer
+	./.gofi/gofi-sdk-go/examples/netx/api
+	./.gofi/gofi-sdk-go/examples/obs
+	./.gofi/gofi-sdk-go/examples/sqln/filter-api
+	./.gofi/gofi-sdk-go/examples/sqln/fulltext
+	./.gofi/gofi-sdk-go/examples/sqln/search
+	./.gofi/gofi-sdk-go/gofi
+	./.gofi/gofi-sdk-go/iam
+	./.gofi/gofi-sdk-go/msq
+	./.gofi/gofi-sdk-go/msq/provider/kafka
+	./.gofi/gofi-sdk-go/msq/provider/nats
+	./.gofi/gofi-sdk-go/msq/provider/oci
+	./.gofi/gofi-sdk-go/msq/provider/rabbitmq
+	./.gofi/gofi-sdk-go/msq/provider/redis
+	./.gofi/gofi-sdk-go/msq/provider/sqs
+	./.gofi/gofi-sdk-go/netx
+	./.gofi/gofi-sdk-go/netx/awssign
+	./.gofi/gofi-sdk-go/netx/grpcx
+	./.gofi/gofi-sdk-go/obs
+	./.gofi/gofi-sdk-go/sqln
+	./.gofi/gofi-sdk-go/sqln/rdsauth
+)
 
 // Uncomment if you keep a local checkout of the gofi SDK alongside this project:
 // replace github.com/joaoprofile/gofi => ../gofi

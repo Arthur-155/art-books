@@ -9,4 +9,4 @@
 
 | Submódulo | Versão | Status | Entidades | Assunto | Arquivo |
 |---|---|---|---|---|---|
-| n/a | 1.0 | proposto | — | cadastro, login, sessão, confirmação de e-mail, recuperação de senha, troca de senha, troca de e-mail, exclusão de conta, limite de tentativas, administrador, username, privacidade | `specs/contas/deltas/contas.md` |
+| n/a | 1.0 | aprovado | — | cadastro, login, sessão, confirmação de e-mail, recuperação de senha, troca de senha, troca de e-mail, exclusão de conta, limite de tentativas, administrador, username, privacidade | `specs/contas/deltas/contas.md` |
