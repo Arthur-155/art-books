@@ -1,40 +1,47 @@
 # art-books
 
-Go service bootstrapped by `gofi init`.
+Serviço Go criado com `gofi init` e especificado por contexto (PRD → spec → mudança → entrega).
 
-## Layout
+## Estrutura
 
 ```
 .
 ├── go.work
-├── src/
+├── backend/
 │   ├── go.mod
-│   ├── .migrations/
-│   ├── domain/
-│   └── art-books/
-│       └── main.go
-└── .claude/                 # gofi agents config
+│   ├── .migrations/        # SQL em pares up/down
+│   ├── art-books/          # composition root (main, config, wire)
+│   └── domain/<contexto>/  # entity, repository, service, handler, mailer, worker
+├── prd/<contexto>/         # PRD de cada contexto
+├── specs/<contexto>/       # spec viva, mudanças e design
+└── .claude/                # skills, SDK e conhecimento do gofi
 ```
 
-## Build & run
+## Contextos
+
+`contas`, `catalogo`, `leitura-e-resumos`, `recomendacoes`, `feeds`, `interacoes`, `perfil` e `amizades`.
+O estado de cada um: `gofi status`.
+
+## Build e execução
 
 ```sh
-go -C src run ./art-books
+go -C backend run ./art-books
 ```
 
-## Tests
+A configuração é lida do ambiente em `backend/art-books/config.go`.
+
+## Testes
 
 ```sh
 gofi test
 ```
 
-## Next steps
-
-Use the agents to design and implement your first context:
+## Fluxo de trabalho
 
 ```
-/gofi-pd     # discovery (optional)
-/gofi-spec   # generate the SDD spec
-/gofi-eng    # implement from spec
-/gofi-qa     # audit
+/gofi-pd      # descoberta: PRD a partir do problema
+/gofi-spec    # contrato: proposta, deltas e design da mudança
+gofi run <mudança>   # entrega: o loop implementa, testa, audita e arquiva
 ```
+
+Mudanças só rodam depois de aprovadas pela pessoa (`gofi change approve`).
